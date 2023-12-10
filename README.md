@@ -19,6 +19,46 @@ https://cat2151.github.io/easyabcjs6/
 # easyabcjs6 を index.html に組み込む手順
 see `index.html`.
 
+# カスタマイズする手順
+## デフォルトではどう動作するの？
+```html
+    <button id="play-button">play</button>
+        → このidのボタンを押すと演奏開始します
+
+    <div id="music-score"></div>
+        → このidのdivに五線譜が表示されます
+
+    <textarea id="abc-notation">[C8EGB]</textarea>
+        → このidのtextareaに文字を入力すると、その文字を演奏します
+```
+## どうカスタマイズするの？
+```JavaScript
+easyabcjs6.musicScoreId = "music-score";
+    → もし五線譜表示divのidが衝突して別のものにしたい場合、ここを書き換えます
+
+easyabcjs6.playButtonId = "play-button";
+    → もしボタンのidが衝突して別のものにしたい場合、ここを書き換えます
+
+easyabcjs6.abcNotationId = "abc-notation";
+    → もし文字入力textareaのidが衝突して別のものにしたい場合、ここを書き換えます
+
+easyabcjs6.play = ～
+    → もし演奏開始関数を別のものにしたい場合、ここを書き換えます
+        例：
+            easyabcjs6.play = myPlay;
+            function myPlay() {
+                easyabcjs6.playSub("CDE", ABCJS, easyabcjs6.musicScoreId);
+            }
+        例：ABC music notationのかわりに Chord notationや、Music Macro Languageを
+            使いたいときに、プリプロセッサとして、
+            chord2mml & mml2abc や、mml2abc を中間に差し込みます。
+            （chord2mml や mml2abc は今後概念実証pre release予定です）
+
+上記の設定後は、必ず、
+    easyabcjs6.init();
+を実行してください
+```
+
 # 用途
 - easyabcjs6を使うことで、以下の実現を目指しています。
     - webで abcjs を楽に使う用。
