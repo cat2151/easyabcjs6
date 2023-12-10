@@ -68,3 +68,6 @@ easyabcjs6.play = ～
         - ABC music notation以外のフォーマットのテキスト音楽データについても
         - 五線譜表示や演奏のチャンスを増やす用。
         - そして将来的には abcjs に依存しない譜面表示や演奏の仕組み構築に役立てる用。
+
+# 参考にしたpage
+- [abcjs examples](https://paulrosen.github.io/abcjs/examples/toc.html)
