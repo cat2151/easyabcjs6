@@ -11,10 +11,10 @@ https://cat2151.github.io/easyabcjs6/
 - 五線譜が表示されたことを確認します。
 - 音が出たことを確認します。
 - より複雑な ABC music notationを書きます。
-- サンプル
-    - [実用abc譜](https://www.asahi-net.or.jp/~mf4n-nmr/abc_notation.html)
-        - ページ内を「program」で検索すると、
-        - MIDI Program Changeを使った作例があります
+    - サンプル
+        - [実用abc譜](https://www.asahi-net.or.jp/~mf4n-nmr/abc_notation.html)
+            - ページ内を「program」で検索すると、
+            - MIDI Program Changeを使った作例があります
 
 # easyabcjs6 を index.html に組み込む手順
 see `index.html`.
