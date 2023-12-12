@@ -30,6 +30,7 @@ easyabcjs6.playSub = function(abc, abcjs, musicScoreId) {
       .then(function (_response) {
         // console.log(_response);
         easyabcjs6.midiBuffer.prime().then(function (_response) {
+          easyabcjs6.midiBuffer.stop(); // for mml2abc
           easyabcjs6.midiBuffer.start();
         });
       })
