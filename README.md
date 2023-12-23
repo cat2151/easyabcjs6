@@ -69,5 +69,8 @@ easyabcjs6.play = ～
         - 五線譜表示や演奏のチャンスを増やす用。
         - そして将来的には abcjs に依存しない譜面表示や演奏の仕組み構築に役立てる用。
 
+# このprojectが優先すること
+- demoのpageを開いてキーボードのCキーを押すだけで音が出ること。
+
 # 参考にしたpage
 - [abcjs examples](https://paulrosen.github.io/abcjs/examples/toc.html)
