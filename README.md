@@ -1,10 +1,10 @@
 # easyabcjs6
 A library for using abcjs easily in the browser.
 
-# demo
+# Demo
 https://cat2151.github.io/easyabcjs6/
 
-# demoの遊び方
+## Demoの遊び方
 - textareaに、ABC music notationフォーマットの文字列を書きます。
 - 文字列のサンプル basic はこちら
     - [abc music notation basic](http://www.lesession.co.uk/abc/abc_notation.htm)
@@ -16,22 +16,43 @@ https://cat2151.github.io/easyabcjs6/
             - ページ内を「program」で検索すると、
             - MIDI Program Changeを使った作例があります
 
-# easyabcjs6 を index.html に組み込む手順
-see `index.html`.
+# Features
+- ブラウザで[abcjs](https://github.com/paulrosen/abcjs) をeasyに使える Wrapper library
+    - abcjsは、ブラウザで五線譜を描画しつつSoundFont GM音源ソフトシンセを鳴らすライブラリです
+- 用途は？
+    - easyabcjs6を使うことで、以下の実現を目指しています。
+        - webで abcjs を楽に使う用。
+        - webで五線譜表示と演奏を楽に行う用。
+            - それを利用し、
+            - 今後、Chord notation や Music Macro Language 等、
+            - ABC music notation以外のフォーマットのテキスト音楽データについても
+            - 五線譜表示や演奏のチャンスを増やす用。
+            - そして将来的には abcjs に依存しない譜面表示や演奏の仕組み構築に役立てる用。
 
-# カスタマイズする手順
-## デフォルトではどう動作するの？
+# Requirement
+- `index.html` をちょっと書けば音が鳴ります
+
+# Installation
+- `index.html` を参考にコードを書けばOK。
+  - `easyabcjs6.js`は配置不要。CDNからの取得でOK。詳しくは `index.html` を参照ください。
+
+# Usage
+- `index.html` を参考にコードを書けばOK。
+
+# Note
+## カスタマイズする手順
+### デフォルトではどう動作するの？
 ```html
-    <button id="play-button">play</button>
-        → このidのボタンを押すと演奏開始します
+<button id="play-button">play</button>
+    → このidのボタンを押すと演奏開始します
 
-    <div id="music-score"></div>
-        → このidのdivに五線譜が表示されます
+<div id="music-score"></div>
+    → このidのdivに五線譜が表示されます
 
-    <textarea id="abc-notation">[C8EGB]</textarea>
-        → このidのtextareaに文字を入力すると、その文字を演奏します
+<textarea id="abc-notation">[C8EGB]</textarea>
+    → このidのtextareaに文字を入力すると、その文字を演奏します
 ```
-## どうカスタマイズするの？
+### どうカスタマイズするの？
 ```JavaScript
 easyabcjs6.musicScoreId = "music-score";
     → もし五線譜表示divのidが衝突して別のものにしたい場合、ここを書き換えます
@@ -59,18 +80,8 @@ easyabcjs6.play = ～
 を実行してください
 ```
 
-# 用途
-- easyabcjs6を使うことで、以下の実現を目指しています。
-    - webで abcjs を楽に使う用。
-    - webで五線譜表示と演奏を楽に行う用。
-        - それを利用し、
-        - 今後、Chord notation や Music Macro Language 等、
-        - ABC music notation以外のフォーマットのテキスト音楽データについても
-        - 五線譜表示や演奏のチャンスを増やす用。
-        - そして将来的には abcjs に依存しない譜面表示や演奏の仕組み構築に役立てる用。
+## このprojectが優先すること
+- Demoのpageを開いてキーボードのCキーを押すだけで音が出ること。
 
-# このprojectが優先すること
-- demoのpageを開いてキーボードのCキーを押すだけで音が出ること。
-
-# 参考にしたpage
+## 参考にしたpage
 - [abcjs examples](https://paulrosen.github.io/abcjs/examples/toc.html)
